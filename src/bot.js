@@ -18,6 +18,21 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
+  console.log(msg)
+  let date = new Date();
 
-  bot.sendMessage(chatId, 'Received your message');
+  if(date.getHours() > 9 && date.getHours < 18){
+    bot.sendMessage(chatId, 'https://faesa.br');
+  }
+  else{
+    console.log(msg.text)
+    if(msg.text.includes('@')){
+      bot.sendMessage(chatId, 'Recebemos o seu Email, aguarde e logo entraremos em contato.');
+    }
+    else{
+      bot.sendMessage(chatId, 'Olá, nosso funcionamento é das 09 as 18 horas, poderia nos informar o seu e-mail para possamos entrar em contato?');
+    }
+    
+  }
 });
+
