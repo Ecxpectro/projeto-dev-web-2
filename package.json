@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/Ecxpectro/projeto-dev-web-2#readme",
   "devDependencies": {
-    "@types/node-telegram-bot-api": "^0.64.6"
+    "@types/node-telegram-bot-api": "^0.64.6",
+    "prisma": "^5.12.1"
   },
   "dependencies": {
+    "@prisma/client": "^5.12.1",
     "asynckit": "^0.4.0",
     "combined-stream": "^1.0.8",
     "delayed-stream": "^1.0.0",
