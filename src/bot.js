@@ -25,7 +25,7 @@ bot.on('message', async (msg) => {
 
   const date = new Date();
 
-  if (date.getHours() > 9 && date.getHours() < 18) {
+  if (date.getHours() >= 9 && date.getHours() <= 18) {
     bot.sendMessage(chatId, 'https://faesa.br');
   } else {
     console.log(msg.text);
